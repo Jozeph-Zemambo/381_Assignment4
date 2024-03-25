@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Header from './Header';
 import ProductList from './ProductList';
 import Cart from './Cart';
-// import Footer from './Footer';
+import Footer from './Footer';
 
 const Productpage = () => {
   const [cart, setCart] = useState([]);
@@ -42,14 +42,18 @@ const Productpage = () => {
   };
   
   return (
+    
     <div className="product-page">
-      <table>
-        <tr>
-          <td><ProductList addToCart={addToCart} /></td>
-          <td style={{verticalAlign:'top'}}><Cart cart={cart} removeFromCart={removeFromCart} /></td>
-        </tr>
-      </table>
+      <Header />
+        <table>
+          <tr>
+            <td><ProductList addToCart={addToCart} /></td>
+            <td style={{verticalAlign:'top'}}><Cart cart={cart} removeFromCart={removeFromCart} /></td>
+          </tr>
+        </table>
+      <Footer />
     </div>
+    
   );
 }
 
