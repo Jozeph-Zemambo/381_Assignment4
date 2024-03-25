@@ -12,19 +12,19 @@ code {
     monospace;
 }
 
-/* NavBar.css */
+
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 15px;
 }
 
 .logo img {
   height: 50px;
 }
 
-/* index.css */
+
 .nav-links {
   display: flex;
   justify-content: space-between;
@@ -37,4 +37,15 @@ code {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.footer { 
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding-bottom: 25px;
+}
+
+.homemainsection{
+  padding-left: 10px;
 }
