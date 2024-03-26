@@ -2,7 +2,7 @@ import React from 'react';
 
 const CartItem = ({ item, removeFromCart }) => {
   const { id, name, price, quantity } = item;
-  const totalPrice = price * quantity;
+  const totalPrice = (price * quantity).toFixed(2);
 
   return (
     <div className="cart-item">
