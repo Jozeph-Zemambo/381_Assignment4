@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import '../index.css';
 
 const ProductItem = ({ product, addToCart }) => {
   const [showDetails, setShowDetails] = useState(false);
@@ -9,7 +10,7 @@ const ProductItem = ({ product, addToCart }) => {
 
   return (
     <div className="product-item">
-      <img src={product.image} alt={product.name} style={imgcss}/>
+      <img src={product.image} alt={product.name} class="prod-img"/>
       <h3 onMouseEnter={toggleDetails} onMouseLeave={toggleDetails}>
         {product.name}
       </h3>
@@ -22,7 +23,3 @@ const ProductItem = ({ product, addToCart }) => {
 
 export default ProductItem;
 
-
-const imgcss = {
-    width: '20%',
-}
