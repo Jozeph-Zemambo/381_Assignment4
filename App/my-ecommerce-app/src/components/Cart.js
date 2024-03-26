@@ -8,7 +8,7 @@ const Cart = ({ cart, removeFromCart }) => {
       {cart.map(item => (
         <CartItem key={item.id} item={item} removeFromCart={removeFromCart} />
       ))}
-      <h3>Total: ${cart.reduce((acc, item) => acc + item.price * item.quantity, 0)}</h3>
+      <h3>Total: ${(cart.reduce((acc, item) => acc + item.price * item.quantity, 0)).toFixed(2)}</h3>
     </div>
   );
 }
